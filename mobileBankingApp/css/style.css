@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@100;400&family=Roboto:wght@100;300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../HelveticaNeue-Bold.ttf");
+}
+div.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.container div#preloader {
+  visibility: hidden;
+}
+div.container section#login {
+  position: absolute;
+  z-index: 5;
+  width: 343px;
+  height: 693px;
+  transform: scale(0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.container section#login img#logo {
+  width: 200px;
+  height: auto;
+}
+div.container section#login section#login-form-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div.container section#login section#login-form-section input#username,
+div.container section#login section#login-form-section input#password,
+div.container section#login section#login-form-section button#submit {
+  width: 70%;
+  margin: 1em auto;
+  font-weight: 900;
+}
+div.container section#login section#login-form-section input#username,
+div.container section#login section#login-form-section input#password {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  padding: 1em;
+  border: none;
+  background: #fff;
+}
+div.container section#login section#login-form-section input#username:focus,
+div.container section#login section#login-form-section input#password:focus {
+  background-color: #fcf4ca;
+  border: none;
+  outline: 0;
+}
+div.container section#login section#login-form-section button#submit {
+  padding: 0.75em 1.5em;
+  font-weight: 800;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 3.5em;
+  background: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  width: 50%;
+  border: none;
+  color: #fff;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 200ms linear;
+}
+div.container section#login section#login-form-section button#submit:active {
+  background: linear-gradient(180deg, rgb(165, 163, 203), rgb(201, 200, 214));
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.7);
+}
+div.container section#welcome-main-content {
+  position: absolute;
+  z-index: 4;
+  width: 343px;
+  height: 693px;
+  transform: scale(0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.container section#welcome-main-content div#welcome-top-content {
+  position: relative;
+  top: 4em;
+  right: 2.5em;
+  color: #fff;
+}
+div.container section#welcome-main-content div#welcome-top-content div p {
+  font-size: 1.5em;
+}
+div.container section#welcome-main-content div#welcome-top-content div p:nth-child(1) {
+  letter-spacing: 2px;
+}
+div.container section#welcome-main-content div#welcome-top-content div p:nth-child(2) {
+  text-transform: uppercase;
+}
+div.container section#welcome-main-content div#welcome-top-content div h4 {
+  font-weight: 800;
+}
+div.container section#welcome-main-content div#welcome-middle-content {
+  position: relative;
+  top: 5em;
+  width: 80%;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#checking,
+div.container section#welcome-main-content div#welcome-middle-content div#savings {
+  height: 120px;
+  background-color: #fff;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  position: relative;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#checking h3,
+div.container section#welcome-main-content div#welcome-middle-content div#savings h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 1em;
+  line-height: 2em;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#checking p:nth-child(2),
+div.container section#welcome-main-content div#welcome-middle-content div#savings p:nth-child(2) {
+  font-size: 1.75em;
+  letter-spacing: 2px;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#checking p:nth-child(3),
+div.container section#welcome-main-content div#welcome-middle-content div#savings p:nth-child(3) {
+  font-size: 0.75em;
+  letter-spacing: 2px;
+  line-height: 2em;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#checking:hover,
+div.container section#welcome-main-content div#welcome-middle-content div#savings:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+div.container section#welcome-main-content div#welcome-middle-content div#account {
+  position: relative;
+  top: -0.25em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  color: rgba(0, 0, 0, 0.7);
+}
+div.container section#welcome-main-content div#welcome-middle-content div#account a#account-button {
+  padding: 0.75em 1.5em;
+  font-weight: 800;
+  font-size: 1.15em;
+  cursor: pointer;
+  border-radius: 3.5em;
+  background: linear-gradient(180deg, rgb(165, 163, 203), rgb(201, 200, 214));
+  text-decoration: none;
+  color: #fff;
+  transition: all 200ms linear;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#account a#account-button:hover {
+  background: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+div.container section#welcome-main-content div#welcome-middle-content div#deal {
+  position: relative;
+  top: -0.25em;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#deal p {
+  margin: 0.25em 0 0 2em;
+  font-weight: 800;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#deal p img#offer {
+  position: relative;
+  top: 0.23em;
+  width: 1.2em;
+  margin-left: 0.5em;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#deal div#deal-icons {
+  display: flex;
+  justify-content: center;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#deal div#deal-icons img {
+  width: 28%;
+}
+div.container section#welcome-main-content div#welcome-middle-content div#deal div#deal-icons img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 200ms linear;
+}
+div.container section#welcome-main-content div#welcome-bottom-content {
+  position: relative;
+  top: 5.2em;
+  height: 120px;
+  width: 80%;
+}
+div.container section#welcome-main-content div#welcome-bottom-content div {
+  display: flex;
+  justify-content: space-between;
+}
+div.container section#welcome-main-content div#welcome-bottom-content div div {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+div.container section#welcome-main-content div#welcome-bottom-content div div img {
+  width: 50%;
+}
+div.container section#welcome-main-content div#welcome-bottom-content div div span {
+  font-size: 0.75em;
+  font-weight: 800;
+  margin-top: 0.5em;
+  text-transform: capitalize;
+}
+div.container section#welcome-main-content div#welcome-bottom-content div div:hover img {
+  transform: scale(1.2);
+  transition: all 200ms linear;
+}
+div.container div#checking-main-content {
+  position: absolute;
+  z-index: 4;
+  width: 343px;
+  height: 693px;
+  transform: scale(0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.container div#checking-main-content div#checking-1 {
+  position: relative;
+  top: 75px;
+  left: 40px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #fff;
+}
+div.container div#checking-main-content div#checking-1 h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+div.container div#checking-main-content div#checking-1 p:nth-child(2) {
+  font-size: 1.75em;
+  letter-spacing: 2px;
+}
+div.container div#checking-main-content div#checking-1 p:nth-child(3) {
+  font-size: 0.75em;
+  letter-spacing: 2px;
+}
+div.container div#checking-main-content div#checking-1 img#exclamation {
+  width: 20px;
+  position: relative;
+  top: -1.15em;
+  left: 130px;
+  transform: scale(0.85);
+}
+div.container div#checking-main-content div#checking-1 img#left {
+  width: 30px;
+  position: relative;
+  right: 95px;
+  top: -70px;
+  transform: scale(1.25);
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+div.container div#checking-main-content div#checking-1 img#left:hover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  transform: scale(1.5);
+}
+div.container div#checking-main-content div#checking-data {
+  background: #fff;
+  width: 275px;
+  height: 420px;
+  position: absolute;
+  top: 154px;
+  border-radius: 1em;
+  display: grid;
+  grid-template-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(1) {
+  padding: 1em;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(1) img.clock {
+  width: 2em;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(2) div:nth-child(1) {
+  padding: 0.5em 1em 0em 0em;
+  display: flex;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(2) div:nth-child(1) span {
+  font-size: 0.75em;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(2) div:nth-child(1) span:nth-child(2) {
+  margin-left: auto;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(2) div:nth-child(2) {
+  margin-top: 0.25em;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs div:nth-child(2) div:nth-child(2) h3 {
+  font-weight: 800;
+  font-size: 0.75em;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs:nth-child(6) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+div.container div#checking-main-content div#checking-data div.checking-data-divs:nth-child(6) p {
+  font-size: 0.5em;
+  font-weight: 800;
+}
+div.container div#checking-main-content div#checking-bottom-content {
+  position: relative;
+  top: 490px;
+  height: 120px;
+  width: 80%;
+}
+div.container div#checking-main-content div#checking-bottom-content div {
+  display: flex;
+  justify-content: space-between;
+}
+div.container div#checking-main-content div#checking-bottom-content div div {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+div.container div#checking-main-content div#checking-bottom-content div div img {
+  width: 50%;
+}
+div.container div#checking-main-content div#checking-bottom-content div div span {
+  font-size: 0.75em;
+  font-weight: 800;
+  margin-top: 0.5em;
+  text-transform: capitalize;
+}
+div.container div#checking-main-content div#checking-bottom-content div div:hover img {
+  transform: scale(1.2);
+  transition: all 200ms linear;
+}
+div.container div#template {
+  width: 352px;
+  height: 693px;
+  position: absolute;
+  background: transparent url("../images/phone-template.png") no-repeat;
+  background-size: contain;
+  transform: scale(0.85);
+  z-index: 2;
+}
+div.container section#wrapper-content {
+  margin: 0 auto;
+  width: 343px;
+  height: 693px;
+  background: rgb(224, 223, 223);
+  position: relative;
+  z-index: 1;
+  transform: scale(0.85);
+  border-radius: 3.5em;
+}
+div.container section#wrapper-content div#top-background-gradient {
+  position: relative;
+  background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+  border-radius: 3.5em 3.5em 0 0;
+  height: 170px;
+}
+div.container section#wrapper-content div#bottom-white-background {
+  position: relative;
+  height: 100px;
+  background: #fff;
+  top: 25.8em;
+}
+div.container section#wrapper-content div#full-gradient-background {
+  position: absolute;
+  top: 0;
+  height: 693px;
+  width: 100%;
+  border-radius: 3.5em;
+  background: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+}/*# sourceMappingURL=style.css.map */
