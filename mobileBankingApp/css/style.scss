@@ -30,8 +30,6 @@ $veryDarkGray: rgba(0, 0, 0, 0.7);
 $HelveticaNeue: HelveticaNeue;
 $transition: all 200ms linear;
 
-
-
 div.container {
   //if gradient is background, use background-image not background-color
   width: 100vw;
@@ -56,9 +54,28 @@ div.container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    img#logo {
-      width: 200px;
-      height: auto;
+    // img#logo {
+    //   width: 200px;
+    //   height: auto;
+    // }
+    svg {
+      width: 75%;
+      // .st0 { //not needed
+      //   fill: #ffffff;
+      //   fill: #00ff00;
+      // }
+      .st1 { //background and border around polygon
+        fill: #ffffff;
+        stroke: #6d6e71;
+        stroke-width: 4;
+        stroke-miterlimit: 10;
+      }
+      // .st2 {
+      //   enable-background: new;
+      // }
+      .st3 {
+        fill: #ce0505;
+      }
     }
     section#login-form-section {
       width: 100%;
@@ -182,9 +199,8 @@ div.container {
       }
       div#checking:hover,
       div#savings:hover {
-          box-shadow: $boxShadow;
-          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
-
+        box-shadow: $boxShadow;
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
       }
       div#account {
         position: relative;
@@ -196,82 +212,83 @@ div.container {
         pointer-events: auto; //makes area clickable
         color: $veryDarkGray;
         a#account-button {
-            padding: 0.75em 1.5em;
-            font-weight: $fW800;
-            font-size: 1.15em;
-            cursor:pointer;
-            border-radius: $radius1;
-            background: linear-gradient($gradient1);
-            text-decoration: none;
-            color: $whiteColor;
-            transition: all 200ms linear;
+          padding: 0.75em 1.5em;
+          font-weight: $fW800;
+          font-size: 1.15em;
+          cursor: pointer;
+          border-radius: $radius1;
+          background: linear-gradient($gradient1);
+          text-decoration: none;
+          color: $whiteColor;
+          transition: all 200ms linear;
         }
         a#account-button:hover {
-            background: linear-gradient($gradient3);
-            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+          background: linear-gradient($gradient3);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
         }
       }
       div#deal {
-          position: relative;
-          top: -0.25em;
-          p{
-              margin: 0.25em 0 0 2em;
-              font-weight: $fW800;
-              img#offer {
-                  position: relative;
-                  top: 0.23em;
-                  width: 1.2em;
-                  margin-left: 0.5em;
-              }
+        position: relative;
+        top: -0.25em;
+        p {
+          margin: 0.25em 0 0 2em;
+          font-weight: $fW800;
+          img#offer {
+            position: relative;
+            top: 0.23em;
+            width: 1.2em;
+            margin-left: 0.5em;
           }
-          div#deal-icons {
-              display: flex;
-              justify-content: center;
-              img {
-                  width: 28%;
-                  //revisit change images to svg
-              }
-              img:hover {
-                // box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
-                cursor: pointer;
-                transform: scale(1.10);
-                transition: $transition;
-              }
+        }
+        div#deal-icons {
+          display: flex;
+          justify-content: center;
+          img {
+            width: 28%;
+            //revisit change images to svg
           }
+          img:hover {
+            // box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: $transition;
+          }
+        }
       }
     }
     /// welcome-middle-content ends here
     /// welcome-bottom-content starts here
-        div#welcome-bottom-content {
-            position: relative;
-            top: 5.2em;
-            height: 120px;
-            width: 80%;
-            div {
-                display: flex;
-                justify-content: space-between;
-                div {
-                    margin-top: 1em;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    cursor: pointer;
-                    img {
-                        width: 50%;
-                    }
-                    span {
-                        font-size: 0.75em;
-                        font-weight: $fW800;
-                        margin-top: 0.5em;
-                        text-transform: capitalize;
-                    }
-                }
-                div:hover img { //targets imgs not the span text
-                    transform: scale(1.20);
-                    transition: $transition;
-                }
-            }
+    div#welcome-bottom-content {
+      position: relative;
+      top: 5.2em;
+      height: 120px;
+      width: 80%;
+      div {
+        display: flex;
+        justify-content: space-between;
+        div {
+          margin-top: 1em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+          img {
+            width: 50%;
+          }
+          span {
+            font-size: 0.75em;
+            font-weight: $fW800;
+            margin-top: 0.5em;
+            text-transform: capitalize;
+          }
         }
+        div:hover img {
+          //targets imgs not the span text
+          transform: scale(1.2);
+          transition: $transition;
+        }
+      }
+    }
     /// welcome-bottom-content ends here
   }
   //////////////////////////////// checking-main-content starts here
@@ -313,23 +330,21 @@ div.container {
         position: relative;
         top: -1.15em;
         left: 130px;
-        transform:scale(0.85);
-
+        transform: scale(0.85);
       }
       img#left {
         width: 30px;
         position: relative;
         right: 95px;
         top: -70px;
-        transform:scale(1.25);
+        transform: scale(1.25);
         background: $whiteColor;
         border-radius: 50%;
         cursor: pointer;
         transition: $transition;
-
       }
       img#left:hover {
-        box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
         transform: scale(1.5);
       }
     }
@@ -339,7 +354,7 @@ div.container {
       height: 420px;
       position: absolute;
       top: 154px;
-      border-radius: $radius2;//add css grid
+      border-radius: $radius2; //add css grid
       display: grid;
       grid-template-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
       div.checking-data-divs {
@@ -360,14 +375,14 @@ div.container {
             padding: 0.5em 1em 0em 0em;
             // width: 100%;
             display: flex;
-            span{
+            span {
               font-size: 0.75em;
             }
             span:nth-child(2) {
               margin-left: auto;
             }
           }
-          div:nth-child(2){
+          div:nth-child(2) {
             margin-top: 0.25em;
             h3 {
               font-weight: $fW800;
@@ -377,7 +392,7 @@ div.container {
         }
       }
       div.checking-data-divs:nth-child(6) {
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         color: red;
@@ -393,30 +408,31 @@ div.container {
       height: 120px;
       width: 80%;
       div {
+        display: flex;
+        justify-content: space-between;
+        div {
+          margin-top: 1em;
           display: flex;
-          justify-content: space-between;
-          div {
-              margin-top: 1em;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              cursor: pointer;
-              img {
-                  width: 50%;
-              }
-              span {
-                  font-size: 0.75em;
-                  font-weight: $fW800;
-                  margin-top: 0.5em;
-                  text-transform: capitalize;
-              }
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+          img {
+            width: 50%;
           }
-          div:hover img { //targets imgs not the span text
-              transform: scale(1.20);
-              transition: $transition;
+          span {
+            font-size: 0.75em;
+            font-weight: $fW800;
+            margin-top: 0.5em;
+            text-transform: capitalize;
           }
+        }
+        div:hover img {
+          //targets imgs not the span text
+          transform: scale(1.2);
+          transition: $transition;
+        }
       }
-  }
+    }
   }
   //////////////////////////////// checking-main-content ends here
 
@@ -463,10 +479,9 @@ div.container {
       width: 100%;
       border-radius: $radius1;
       background: linear-gradient($gradient3);
-    //   visibility: hidden; //remove after adding javascript
+      //   visibility: hidden; //remove after adding javascript
     }
   }
-
 
   ////////////////////////////// container ends here
 }

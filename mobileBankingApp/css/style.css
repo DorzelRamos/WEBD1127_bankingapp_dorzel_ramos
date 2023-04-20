@@ -32,9 +32,17 @@ div.container section#login {
   justify-content: center;
   align-items: center;
 }
-div.container section#login img#logo {
-  width: 200px;
-  height: auto;
+div.container section#login svg {
+  width: 75%;
+}
+div.container section#login svg .st1 {
+  fill: #ffffff;
+  stroke: #6d6e71;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+div.container section#login svg .st3 {
+  fill: #ce0505;
 }
 div.container section#login section#login-form-section {
   width: 100%;
